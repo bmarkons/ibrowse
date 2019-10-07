@@ -11,5 +11,5 @@ blocks:
         - name: Rebar
           commands:
             - sem-version erlang 21
-            - ./rebar3 compile
-            - ./rebar3 eunit
+            - rebar3 compile
+            - rebar3 eunit
