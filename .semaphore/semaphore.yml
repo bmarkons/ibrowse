@@ -1,15 +1,18 @@
 version: v1.0
-name: Erlang
+name: First pipeline
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: Test
+  - name: Block
     task:
+      prologue:
+        commands:
+          - checkout
       jobs:
-        - name: Rebar
+        - name: cowsay
           commands:
-            - sem-version erlang 21
-            - rebar3 compile
-            - rebar3 eunit
+            - >-
+              cowsay "Congrats! You've just run your first command on Semaphore.
+              Now go ahead, and tweak your workflow to do something useful."
