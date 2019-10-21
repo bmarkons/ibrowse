@@ -13,6 +13,7 @@ blocks:
       jobs:
         - name: cowsay
           commands:
+            - sudo apt-get install cowsay
             - >-
               cowsay "Congrats! You've just run your first command on Semaphore.
               Now go ahead, and tweak your workflow to do something useful."
